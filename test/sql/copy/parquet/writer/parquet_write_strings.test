@@ -26,7 +26,7 @@ COPY strings TO '__TEST_DIR__/strings.parquet' (FORMAT PARQUET);
 query I
 SELECT encodings FROM parquet_metadata('__TEST_DIR__/strings.parquet')
 ----
-RLE_DICTIONARY
+PLAIN_DICTIONARY
 
 query I
 SELECT * FROM '__TEST_DIR__/strings.parquet'
